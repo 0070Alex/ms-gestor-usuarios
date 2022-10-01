@@ -4,7 +4,7 @@ import java.util.Date;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "ROLES",schema="USERS")
+@Table(name = "ROLES",schema="TB_USUARIOS")
 public class Roles {
 
 @Id
