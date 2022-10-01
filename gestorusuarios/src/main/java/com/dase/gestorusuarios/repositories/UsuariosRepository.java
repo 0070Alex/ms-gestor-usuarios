@@ -18,7 +18,7 @@ import org.springframework.data.repository.CrudRepository;
  */
 public interface UsuariosRepository extends CrudRepository<Usuarios, Object> {    
     
-    @Query(value = "SELECT u.id_usuario as id, u.username , u.password, u.nombre, u.apellido, u.email, u.telefono, u.estado FROM users.usuarios u where u.username = ?1 and u.password = ?2",
+    @Query(value = "SELECT u.id_usuario as id, u.username , u.password, u.nombre, u.apellido, u.email, u.telefono, u.estado FROM tb_usuarios.usuarios u where u.username = ?1 and u.password = ?2",
             nativeQuery = true)
     public UsuarioProjection findUserByUsernameAndPass(String user, String pass);
     
