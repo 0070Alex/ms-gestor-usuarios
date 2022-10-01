@@ -8,6 +8,7 @@ package com.dase.gestorusuarios.controllers;
 import com.dase.gestorusuarios.commons.CommonController;
 import com.dase.gestorusuarios.entities.UsuarioRol;
 import com.dase.gestorusuarios.services.UsuarioRolSvc;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * @author Alexander Elias
  */
+
+@CrossOrigin(origins="http://localhost:4200")
 @RestController
 @RequestMapping(path = "/usurio-rol")
 public class UsuarioRolController  extends CommonController<UsuarioRol, UsuarioRolSvc>{
