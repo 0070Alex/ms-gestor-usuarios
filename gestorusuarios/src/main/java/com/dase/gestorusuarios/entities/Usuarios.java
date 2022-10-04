@@ -5,7 +5,7 @@ import java.util.Date;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "USUARIOS",schema="TB_USUARIOS")
+@Table(name = "USUARIOS",schema="DB_USUARIOS")
 public class Usuarios{
      @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
