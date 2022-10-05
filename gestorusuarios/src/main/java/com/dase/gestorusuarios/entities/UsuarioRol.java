@@ -27,7 +27,8 @@ public class UsuarioRol {
 
     @Column(name = "ESTADO")
     private String estado;
-
+    
+    @PrePersist
     public void prePersist() {
         this.fechaRegistro = new Date();
         this.estado = "A";
