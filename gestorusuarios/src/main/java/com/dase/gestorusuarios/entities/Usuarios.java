@@ -32,16 +32,16 @@ public class Usuarios{
     private String telefono;
     
     @Column(name = "FECHA_REGISTRO")
-    @Temporal(javax.persistence.TemporalType.DATE)
     private Date fechaRegistro;
     
     @Column(name = "ESTADO")
     private String estado;   
     
-    @PrePersist
     public void prePersist() {
+        this.fechaRegistro = new Date();
         this.estado = "A";
     }
+
 
     public Usuarios() {
     }

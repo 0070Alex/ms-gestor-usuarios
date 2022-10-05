@@ -23,14 +23,13 @@ public class UsuarioRol {
     private Roles rol;
 
     @Column(name = "FECHA_ADICION")
-    @Temporal(javax.persistence.TemporalType.TIMESTAMP)
     private Date fechaRegistro;
 
     @Column(name = "ESTADO")
     private String estado;
 
-    @PrePersist
     public void prePersist() {
+        this.fechaRegistro = new Date();
         this.estado = "A";
     }
 
