@@ -18,4 +18,5 @@ public interface UsuariosSvc extends CommonSvc<Usuarios>{
      
      public UsuarioProjection findUserByUsernameAndPass(String user, String pass);
      
+      public UsuarioProjection findUserByEmial(String email);
 }

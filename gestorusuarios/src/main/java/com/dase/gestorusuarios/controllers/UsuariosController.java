@@ -26,5 +26,11 @@ public class UsuariosController extends CommonController<Usuarios, UsuariosSvc>{
     public ResponseEntity<?> findUserByUsernameAndPass(@PathVariable(required = true) @ApiParam(value = "user") String user, @PathVariable(required = true) @ApiParam(value = "pass") String pass, @RequestHeader(name = "Accept-Languaje", required = false) Locale locale) {
         return ResponseEntity.ok().body(service.findUserByUsernameAndPass(user, pass));
     }
+    
+    @GetMapping(path = "/byEmail/{email}")
+    @ApiOperation(value = "Consulta usuarios por medio de su email")
+    public ResponseEntity<?> findUserByEmail(@PathVariable(required = true) @ApiParam(value = "email") String email,  @RequestHeader(name = "Accept-Languaje", required = false) Locale locale) {
+        return ResponseEntity.ok().body(service.findUserByEmial(email));
+    }
 
 }

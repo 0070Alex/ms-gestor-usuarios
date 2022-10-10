@@ -23,6 +23,11 @@ public class UsuariosSvcImpl extends CommonSvcImpl<Usuarios,UsuariosRepository> 
     public UsuarioProjection findUserByUsernameAndPass(String user, String pass) {
         return this.repository.findUserByUsernameAndPass(user, pass);
     }  
+
+    @Override
+    public UsuarioProjection findUserByEmial(String email) {
+        return this.repository.findUsserByEmail(email);
+    }
     
 
 }
