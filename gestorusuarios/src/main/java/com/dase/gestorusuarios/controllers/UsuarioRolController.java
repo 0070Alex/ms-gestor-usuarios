@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Alexander Elias
  */
 
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="https://app-organizador-tareas.herokuapp.com")
 @RestController
 @RequestMapping(path = "/usurio-rol")
 public class UsuarioRolController  extends CommonController<UsuarioRol, UsuarioRolSvc>{

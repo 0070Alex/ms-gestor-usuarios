@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.dase.gestorusuarios.services.UsuariosSvc;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
-@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="https://app-organizador-tareas.herokuapp.com")
 @RestController
 @RequestMapping(path = "/user")
 public class UsuariosController extends CommonController<Usuarios, UsuariosSvc>{
